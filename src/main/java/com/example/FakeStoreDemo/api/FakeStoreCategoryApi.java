@@ -9,4 +9,5 @@ import java.io.IOException;
 public interface FakeStoreCategoryApi {
     @GET("products/category")
     Call<FakeStoreCategoryResponseDTO> listCategories() throws IOException;
+
 }
