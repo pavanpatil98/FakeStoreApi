@@ -2,6 +2,7 @@ package com.example.FakeStoreDemo.controllers;
 
 import com.example.FakeStoreDemo.dto.CategoryDTO;
 import com.example.FakeStoreDemo.services.ICategoryService;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -18,7 +19,7 @@ public class CategoryController {
         this.categoryService = categoryService;
     }
     @GetMapping
-    public List<CategoryDTO> getCategories() throws IOException {
-        return this.categoryService.getAllCategories();
+    public ResponseEntity<List<CategoryDTO>> getCategories() throws IOException {
+        return ResponseEntity.ok(this.categoryService.getAllCategories());
     }
 }

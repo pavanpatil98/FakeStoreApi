@@ -3,7 +3,11 @@ package com.example.FakeStoreDemo;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import io.github.cdimascio.dotenv.Dotenv;
+import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
+
 @SpringBootApplication
+//It enables automatic auditing of JPA entities in a Spring Boot application.
+@EnableJpaAuditing
 public class FakeStoreDemoApplication {
 
 	public static void main(String[] args) {
